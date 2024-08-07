@@ -25,6 +25,14 @@ const router = createRouter({
     path: '/message',
     name: 'message',
     component: () => import('../views/Message/Message.vue')
+  },
+  {
+    path: '/location-selector',
+    name: 'location-selector',
+    component: () => import('../views/LocationSelector/LocationSelector.vue'),
+    meta: {
+      hideTabBar: true
+    }
   }
   ]
 })

@@ -2,7 +2,7 @@
 
 Vue3 Project
 
-06/08/2024: TabBar + Home Page Banner + Location Developing
+06/08/2024: Router + TabBar + Home Page Banner + Location Developing
 
 ## Project Setup
 
