@@ -1,6 +1,7 @@
 <script setup>
 import SearchBar from '@/views/LocationSelector/cpns/SearchBar.vue'
 import Tabs from '@/views/LocationSelector/cpns/Tabs.vue'
+
 </script>
 
 

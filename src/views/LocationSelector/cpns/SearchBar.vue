@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref,computed } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router';
+import { useLocateStore } from '@/stores/locate'
 
+const store = useLocateStore()
+const inputValue = computed({
+  get: () => store.input,
+  set: (value) => store.setInput(value)
+})
 
-const input3 = ref('')
 const select = ref('')
 
 const router = useRouter()
@@ -16,7 +21,7 @@ function cancelClick() {
 <template>
   <div class="mt-4">
     <div class="search-container">
-      <el-input v-model="input3" placeholder="Please input" class="input-with-select" clearable>
+      <el-input v-model="inputValue" placeholder="Please input" class="input-with-select" clearable>
         <template #prepend>
           <el-select v-model="select" placeholder="Select" style="width: 85px;">
             <el-option label="China's Provinces" value="1" />

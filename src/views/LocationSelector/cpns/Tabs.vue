@@ -3,11 +3,12 @@ import { ref } from 'vue'
 import type { TabsPaneContext } from 'element-plus'
 import chinaProvinces from '@/assets/LocalData/ChinaProvinces';
 import otherCountries from '@/assets/LocalData/OtherCountries';
+import { useLocateStore } from '@/stores/locate';
 
 const activeName = ref('first')
 
 const handleClick = (tab: TabsPaneContext, event: Event) => {
-  console.log(tab, event)
+  // console.log(tab, event)
 }
 
 const chinaIndexList = Object.keys(chinaProvinces)
@@ -15,6 +16,16 @@ const otherIndexList = Object.keys(otherCountries)
 
 const hotProvinces = chinaProvinces['*']
 const hotCountries = otherCountries['*']
+
+const store = useLocateStore()
+function setInput(value) {
+  store.setInput(value)
+}
+
+function btnClick(btnName) {
+  console.log(btnName);
+  setInput(btnName)
+}
 
 </script>
 
@@ -29,7 +40,7 @@ const hotCountries = otherCountries['*']
             <van-index-anchor index="Hot Cities" />
             <div class="hot-provinces-list">
               <template v-for="(province, index) in hotProvinces" :key="'hot-' + index">
-                <el-button class="hot-provinces">{{ province }}</el-button>
+                <el-button class="hot-provinces" @click="btnClick(province)">{{ province }}</el-button>
               </template>
             </div>
           </template>
@@ -37,7 +48,7 @@ const hotCountries = otherCountries['*']
           <template v-else>
             <van-index-anchor :index="provincesLetter" />
             <template v-for="(province, provinceIndex) in provinces" :key="provinceIndex" class="china-province">
-              <van-cell :title="province['name'] ? province['name'] : province" />
+              <van-cell :title="province['name'] ? province['name'] : province" @click="btnClick(province['name'])" />
             </template>
           </template>
         </template>
@@ -53,7 +64,7 @@ const hotCountries = otherCountries['*']
             <van-index-anchor index="Hot Countries" />
             <div class="hot-countries-list">
               <template v-for="(hotCountry, countryIndex) in hotCountries" :key="'hot-' + countryIndex">
-                <el-button class="hot-countries">{{ hotCountry }}</el-button>
+                <el-button class="hot-countries" @click="btnClick(hotCountry)">{{ hotCountry }}</el-button>
               </template>
             </div>
           </template>
@@ -61,7 +72,7 @@ const hotCountries = otherCountries['*']
           <template v-else>
             <van-index-anchor :index="otherCountriesLetter" />
             <template v-for="(country, countryIndex) in otherCountriesList" :key="countryIndex" class="other-countries">
-              <van-cell :title="country['name'] ? country['name'] : country" />
+              <van-cell :title="country['name'] ? country['name'] : country" @click="btnClick(country['name'])" />
             </template>
           </template>
         </template>

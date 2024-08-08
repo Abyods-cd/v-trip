@@ -40,25 +40,35 @@ function locateClick() {
 
 
 <style lang="less" scoped>
+.el-card {
+  --el-card-padding: 5px
+}
+
 .locate-box {
-  display: flex;
-  justify-content: space-between;
-  padding: 5px;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  margin: 5px;
+  background-color: #F8F8F8;
+  border-radius: 5px;
+  height: 30px;
 
   .location {
     cursor: pointer;
+    flex: 0 0 auto;
   }
-  
+
   .locate {
+    flex: 0 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-  }
 
-  .locate-img {
-    width: 25px;
-    margin-left: 5px;
+    .locate-img {
+      width: 25px;
+      margin-left: 5px;
+    }
   }
 }
 </style>
