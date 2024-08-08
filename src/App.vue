@@ -11,7 +11,6 @@ const route = useRoute()
 <template>
   <div class="app">
     <router-view></router-view>
-
     <TabBar v-if="!route.meta.hideTabBar"></TabBar>
   </div>
 </template>

@@ -48,7 +48,7 @@ function locateClick() {
   .location {
     cursor: pointer;
   }
-
+  
   .locate {
     display: flex;
     justify-content: center;

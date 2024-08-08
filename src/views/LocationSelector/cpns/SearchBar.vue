@@ -19,8 +19,8 @@ function cancelClick() {
       <el-input v-model="input3" placeholder="Please input" class="input-with-select" clearable>
         <template #prepend>
           <el-select v-model="select" placeholder="Select" style="width: 85px;">
-            <el-option label="Country" value="1" />
-            <el-option label="City" value="2" />
+            <el-option label="China's Provinces" value="1" />
+            <el-option label="Other Countries" value="2" />
           </el-select>
         </template>
         <template #append>
@@ -39,6 +39,9 @@ function cancelClick() {
   padding: 5px;
   background-color: #fff !important;
   height: 32px;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .input-with-select .el-input-group__prepend {
@@ -74,7 +77,7 @@ function cancelClick() {
 
 .cancel-search {
   position: absolute;
-  right: 0;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 10px;
@@ -82,7 +85,7 @@ function cancelClick() {
   width: 70px;
   height: 32px;
   font-size: 14px;
-  font-weight: 100 !important;
+  font-weight: 400 !important;
   border: 1px solid #DCDFE6;
   border-radius: 10%;
   cursor: pointer;
