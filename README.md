@@ -6,6 +6,8 @@ Vue3 Project
 
 07/08/2024: Locate + Location Selector Page Done
 
+08/08/2024: Location Selector Page's Hot Choices Display + Home Page's Calendar Feature Done
+
 ## Project Setup
 
 ```sh
