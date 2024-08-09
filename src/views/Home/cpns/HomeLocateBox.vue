@@ -1,9 +1,11 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import { useLocateStore } from '@/stores/locate';
 
 const router = useRouter()
-const location = ref('Yunnan');
+const store = useLocateStore()
+const location = ref(store.input);
 
 // Navigate to the manual country/city selection page
 function locationSelectorClick() {
@@ -30,11 +32,12 @@ function locateClick() {
 
 <template>
   <div class="locate-box">
-    <div class="location" @click="locationSelectorClick">{{ location }}</div>
     <div class="locate" @click="locateClick">
       <div class="locate-text">Find my location</div>
       <img src="@/assets/image/home/locate.png" alt="locate-img" class="locate-img">
     </div>
+    <div class="location" @click="locationSelectorClick">{{ location }}</div>
+
   </div>
 </template>
 

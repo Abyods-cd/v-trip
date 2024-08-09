@@ -2,7 +2,10 @@ import { defineStore } from "pinia";
 
 export const useBookingStore = defineStore("booking", {
   state: () => ({
-    dates: [new Date(), new Date(new Date().setDate(new Date().getDate() + 7))]
+    dates: [new Date(), new Date(new Date().setDate(new Date().getDate() + 7))],
+    roomNum: 0,
+    adultNum: 0,
+    childrenNum: 0
   }),
   getters: {
     stayDays: (state) => {
@@ -18,6 +21,16 @@ export const useBookingStore = defineStore("booking", {
   actions: {
     setDates(newDates) {
       this.dates = newDates;
+    },
+    setRoomNum(newRoomNum) {
+      this.roomNum = newRoomNum
+    },
+    setAdultNum(newAdultNum) {
+      this.adultNum = newAdultNum
+    },
+    setChildrenNum(newChildrenNum) {
+      this.childrenNum = newChildrenNum
     }
+
   }
 })

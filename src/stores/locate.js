@@ -3,7 +3,7 @@ import { computed } from "vue";
 
 export const useLocateStore = defineStore("locate", {
   state: () => ({
-    input: ''
+    input: 'Yunnan'
   }),
   actions: {
     setInput(value) {

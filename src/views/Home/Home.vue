@@ -2,6 +2,7 @@
 import HomeNavBar from './cpns/HomeNavBar.vue'
 import HomeLocateBox from './cpns/HomeLocateBox.vue';
 import BookingTimes from './cpns/BookingTimes.vue';
+import BookingInfo from './cpns/BookingInfo.vue';
 </script>
 
 
@@ -10,6 +11,7 @@ import BookingTimes from './cpns/BookingTimes.vue';
     <HomeNavBar></HomeNavBar>
     <HomeLocateBox></HomeLocateBox>
     <BookingTimes></BookingTimes>
+    <BookingInfo></BookingInfo>
   </div>
 </template>
 

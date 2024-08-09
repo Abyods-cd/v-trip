@@ -1,12 +1,11 @@
 <script setup>
-import { ref, onMounted, computed, watch, onUpdated } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import VueDatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
 import { useBookingStore } from '@/stores/booking'
 
 const store = useBookingStore()
 const datesRef = ref(store.dates || [new Date(), new Date(new Date().setDate(new Date().getDate() + 7))]);
-
 
 // Watch for changes in datesRef and update the store
 watch(datesRef, (newDates) => {
@@ -29,7 +28,7 @@ onMounted(() => {
 
 
 <template>
-  <el-card class="booking-times" shadow="hover">
+  <div class="booking-times" shadow="hover">
     <div class="booking-text">
       <span class="l-text">
         Select Dates
@@ -42,8 +41,7 @@ onMounted(() => {
       <VueDatePicker v-model="datesRef" range />
     </div>
 
-
-  </el-card>
+  </div>
 </template>
 
 
@@ -70,7 +68,6 @@ onMounted(() => {
 
   .calendar {
     font-size: 10px !important;
-    padding: 5px;
   }
 }
 </style>
