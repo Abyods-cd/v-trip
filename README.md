@@ -8,6 +8,8 @@ Vue3 Project
 
 08/08/2024: Location Selector Page's Hot Choices Display + Home Page's Calendar Feature Done
 
+09/08/2024: Home Pages' Booking Info Display Done
+
 ## Project Setup
 
 ```sh
