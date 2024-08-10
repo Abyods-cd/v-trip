@@ -20,6 +20,7 @@ function locateClick() {
       const response = await fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`);
       const data = await response.json();
       location.value = data.address.city || data.address.town || data.address.village || 'Unknown location';
+      store.input = data.address.city || data.address.town || data.address.village || 'Unknown location';
     } catch (err) {
       console.log('Error fetching location', err);
     }

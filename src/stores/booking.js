@@ -16,6 +16,14 @@ export const useBookingStore = defineStore("booking", {
       } else {
         return 0;
       }
+    },
+    startDateFormatted: (state) => {
+      const startDateObj = new Date(state.dates[0])
+      return `${startDateObj.getDate()}/${startDateObj.getMonth() + 1}/${startDateObj.getFullYear()} `
+    },
+    endDateFormatted: (state) => {
+      const endDateObj = new Date(state.dates[1])
+      return `${endDateObj.getDate()}/${endDateObj.getMonth() + 1}/${endDateObj.getFullYear()} `
     }
   },
   actions: {
