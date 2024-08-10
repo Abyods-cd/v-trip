@@ -1,11 +1,17 @@
 <script setup>
 import { ref } from 'vue';
 import { useBookingStore } from '@/stores/booking'
+import { Search } from "@element-plus/icons-vue";
 
 const store = useBookingStore()
 let roomNum = ref(store.roomNum)
 let adultNum = ref(store.adultNum)
 let childrenNum = ref(store.childrenNum)
+
+const hotelKeywords = ref('')
+function handelSearchClick() {
+  console.log('Search btn clicked');
+}
 
 </script>
 
@@ -14,9 +20,9 @@ let childrenNum = ref(store.childrenNum)
   <div class="booking-info">
     <div class="hotel-info">Hotel Keywords
       <div class="mt-4">
-        <el-input v-model="input3" style="max-width: 600px" placeholder="Please input" class="input-with-select">
+        <el-input v-model="hotelKeywords" style="max-width: 600px" placeholder="Please input" class="input-with-select">
           <template #append>
-            <el-button :icon="Search" />
+            <el-button :icon="Search" @click="handelSearchClick" />
           </template>
         </el-input>
       </div>
@@ -52,6 +58,18 @@ let childrenNum = ref(store.childrenNum)
   border-radius: 5px;
   background-color: var(--bg-color);
 
+  // .el-input,
+  // .el-input__wrapper,
+  // .el-input-number {
+  //   --el-input-focus-border-color: yellow !important;
+  // }
+
+  ::v-deep .el-input,
+  .el-input-number,
+  .el-input__wrapper {
+    --el-input-focus-border-color: var(--primary-color) !important;
+  }
+
   .guest-info {
     display: flex;
     flex-wrap: wrap;
@@ -65,9 +83,10 @@ let childrenNum = ref(store.childrenNum)
       flex: 1;
       align-items: center;
 
+
       .el-input-number {
-        min-width: 80px;
-        flex: 1 1 80px;
+        min-width: 60px;
+        flex: 1 1 60px;
       }
 
       .input-text {

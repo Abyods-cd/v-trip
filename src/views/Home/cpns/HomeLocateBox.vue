@@ -59,6 +59,7 @@ function locateClick() {
   .location {
     cursor: pointer;
     flex: 0 0 auto;
+    color: var(--primary-color);
   }
 
   .locate {
