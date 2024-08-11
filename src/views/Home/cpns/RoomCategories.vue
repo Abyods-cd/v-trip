@@ -6,7 +6,6 @@ const homeStore = useHomeStore()
 
 onMounted(async () => {
   await homeStore.fetchCategoriesData();
-  console.log('Room Categories after fetch:', homeStore.roomCategories);
 });
 
 const categoriesData = computed(() => homeStore.roomCategories)

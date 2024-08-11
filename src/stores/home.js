@@ -1,9 +1,11 @@
 import { defineStore } from "pinia";
-import { getRoomCategories } from '@/services/modules/home.js'
+import { getRoomCategories, getRoomList } from '@/services/modules/home.js'
 
 const useHomeStore = defineStore("home", {
   state: () => ({
-    roomCategories: []
+    roomCategories: [],
+    roomList: [],
+    currentPage: 1
   }),
   actions: {
     async fetchCategoriesData() {
@@ -12,6 +14,11 @@ const useHomeStore = defineStore("home", {
       }).catch(err => {
         console.log(err);
       })
+    },
+    async fetchRoomList() {
+      const res = await getRoomList(this.currentPage)
+      this.roomList.push(...res.data)
+      this.currentPage++
     }
   }
 })

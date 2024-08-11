@@ -44,6 +44,7 @@ function itemClick(item, index) {
   width: 100%;
   border-top: 1px solid var(--primary-color);
   cursor: pointer;
+  background-color: #fff;
 
   .tabbar-item {
     flex: none;

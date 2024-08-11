@@ -16,4 +16,5 @@ const route = useRoute()
 </template>
 
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+</style>
