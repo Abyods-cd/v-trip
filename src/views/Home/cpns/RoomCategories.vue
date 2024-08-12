@@ -1,6 +1,7 @@
 <script setup>
 import useHomeStore from '@/stores/home.js'
 import { onMounted, computed, ref } from 'vue';
+import { storeToRefs } from 'pinia'
 
 const homeStore = useHomeStore()
 
@@ -8,7 +9,8 @@ onMounted(async () => {
   await homeStore.fetchCategoriesData();
 });
 
-const categoriesData = computed(() => homeStore.roomCategories)
+// const categoriesData = computed(() => homeStore.roomCategories)
+const { roomCategories: categoriesData } = storeToRefs(homeStore)
 
 const categoriesTitle = [
   "New Deals",

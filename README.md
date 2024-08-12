@@ -12,6 +12,10 @@ Vue3 Project
 
 10/08/2024: Home Page's Search Button + Room Categories Section Done
 
+11/08/2024: Home Page's Room List Part I (Display) Done
+
+12/08/2024: Home Page's Room List Patr II (Scroll to Fetch More Data) Done + Router Functionality Improved
+
 ## Project Setup
 
 ```sh

@@ -52,7 +52,12 @@ const discount = computed(() => {
   cursor: pointer;
   width: 50%;
   position: relative;
+
   // background-color: red;
+  &:hover {
+    transform: scale(1.01);
+    /* Makes the box grow */
+  }
 
   .item-inner {
     margin: 5px;

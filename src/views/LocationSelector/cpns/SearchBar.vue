@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref,computed } from 'vue'
+import { ref, computed } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router';
 import { useLocateStore } from '@/stores/locate'
@@ -13,8 +13,8 @@ const inputValue = computed({
 const select = ref('')
 
 const router = useRouter()
-function cancelClick() {
-  router.back()
+function confirmClick() {
+  router.push('/home')
 }
 </script>
 
@@ -32,7 +32,7 @@ function cancelClick() {
           <el-button :icon="Search" class="custom-button" style="width: 50px;" />
         </template>
       </el-input>
-      <button class="cancel-search" @click="cancelClick">Cancel</button>
+      <button class="confirm-search" @click="confirmClick">Confirm</button>
     </div>
   </div>
 </template>
@@ -51,6 +51,11 @@ function cancelClick() {
 
 .input-with-select .el-input-group__prepend {
   background-color: var(--el-fill-color-blank);
+}
+
+.el-input__inner {
+  color: #333 !important;
+  font-weight: 500;
 }
 
 .el-input__inner::placeholder {
@@ -80,7 +85,7 @@ function cancelClick() {
   max-width: calc(100% - 80px);
 }
 
-.cancel-search {
+.confirm-search {
   position: absolute;
   right: 8px;
   top: 50%;

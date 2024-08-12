@@ -5,7 +5,8 @@ export const useBookingStore = defineStore("booking", {
     dates: [new Date(), new Date(new Date().setDate(new Date().getDate() + 7))],
     roomNum: 0,
     adultNum: 0,
-    childrenNum: 0
+    childrenNum: 0,
+    hotelKeywords: ''
   }),
   getters: {
     stayDays: (state) => {
@@ -42,3 +43,5 @@ export const useBookingStore = defineStore("booking", {
 
   }
 })
+
+export default useBookingStore

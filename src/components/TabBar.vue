@@ -1,20 +1,28 @@
 <script setup>
 import tabbarData from '@/assets/LocalData/TabBar'
-import { useRouter } from 'vue-router';
-import { ref } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+import { ref, watch } from 'vue';
 import getImageURL from '@/utils/getLocalImage'
 
-// Use router
+// use router
 const router = useRouter()
 
-// Select icon which status is active
+// select icon which status is active
 const currentIndex = ref(0)
 
-// Click icon to add path and change active icon's image
+// click icon to add path and change active icon's image
 function itemClick(item, index) {
   router.push(item.path)
   currentIndex.value = index
 }
+
+// watch currentIndex's change caused by route change
+const route = useRoute()
+watch(route, (newRoute) => {
+  const index = tabbarData.findIndex(item => item.path === route.path)
+  if (index === -1) return
+  currentIndex.value = index
+})
 
 </script>
 

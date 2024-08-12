@@ -11,7 +11,6 @@ let roomNum = ref(bookingStore.roomNum)
 let adultNum = ref(bookingStore.adultNum)
 let childrenNum = ref(bookingStore.childrenNum)
 
-const hotelKeywords = ref('')
 const locateStore = useLocateStore()
 function searchClick() {
   router.push({
@@ -23,8 +22,6 @@ function searchClick() {
     }
   })
 }
-
-
 </script>
 
 
@@ -32,8 +29,9 @@ function searchClick() {
   <div class="booking-info">
     <!-- let users input hotel keywords(if have) -->
     <div class="hotel-info">Hotel Keywords
-      <div class="mt-4">
-        <el-input v-model="hotelKeywords" style="max-width: 600px" placeholder="Please input" class="input-with-select">
+      <div class="mt-4" style="display: block;">
+        <el-input v-model="bookingStore.hotelKeywords" style="width: 100%" placeholder="Please input"
+          class="input-with-select">
         </el-input>
       </div>
     </div>

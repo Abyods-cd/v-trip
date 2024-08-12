@@ -5,7 +5,8 @@ const useHomeStore = defineStore("home", {
   state: () => ({
     roomCategories: [],
     roomList: [],
-    currentPage: 1
+    currentPage: 1,
+    isFetching: false
   }),
   actions: {
     async fetchCategoriesData() {
@@ -16,9 +17,16 @@ const useHomeStore = defineStore("home", {
       })
     },
     async fetchRoomList() {
-      const res = await getRoomList(this.currentPage)
-      this.roomList.push(...res.data)
-      this.currentPage++
+      if (this.isFetching) return;
+      this.isFetching = true;
+      await getRoomList(this.currentPage).then((res) => {
+        this.roomList.push(...res.data)
+        this.currentPage++
+      }).catch((err) => {
+        console.log(err);
+      }).finally(() => {
+        this.isFetching = false
+      })
     }
   }
 })

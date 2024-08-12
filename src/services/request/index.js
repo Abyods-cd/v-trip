@@ -1,5 +1,7 @@
 // src/services/request/index.js
 import axios from 'axios';
+import useMainStore from '@/stores/main';
+const mainStore = useMainStore()
 
 class AxiosInstance {
   constructor() {
@@ -14,6 +16,7 @@ class AxiosInstance {
     // Add request interceptor
     this.axiosInstance.interceptors.request.use(
       (config) => {
+        mainStore.isLoading = true
         const token = localStorage.getItem('token');  // Retrieve token from local storage
         if (token) {
           config.headers.Authorization = `Bearer ${token}`;  // Set the authorization header
@@ -21,6 +24,7 @@ class AxiosInstance {
         return config;
       },
       (error) => {
+        mainStore.isLoading = false
         return Promise.reject(error);
       }
     );
@@ -28,9 +32,11 @@ class AxiosInstance {
     // Add response interceptor
     this.axiosInstance.interceptors.response.use(
       (response) => {
+        mainStore.isLoading = false
         return response.data;
       },
       (error) => {
+        mainStore.isLoading = false
         console.error('API Error:', error.response || error.message);
         return Promise.reject(error);
       }

@@ -11,3 +11,5 @@ export const useLocateStore = defineStore("locate", {
     }
   }
 })
+
+export default useLocateStore

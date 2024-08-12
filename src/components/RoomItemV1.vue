@@ -38,6 +38,13 @@ const numericCommentScore = computed(() => {
 .room-item-v1 {
   cursor: pointer;
   width: 50%;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.01);
+    /* Makes the box grow */
+  }
+
 
   .item-inner {
     position: relative;
