@@ -16,6 +16,8 @@ Vue3 Project
 
 12/08/2024: Home Page's Room List Patr II (Scroll to Fetch More Data) Done + Router Functionality Improved
 
+13/08/2024: Home Page Done
+
 ## Project Setup
 
 ```sh
