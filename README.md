@@ -15,17 +15,17 @@ Future enhancements will focus on completing additional functionalities. 🚀
 
 ### Screenshot of Home Page
 <div align="center">
-  <img src="public/Screenshoot-Home-Page.jpg" alt="Screenshot-Home-Page" style="width: 40%;"/>
+  <img src="public/Screenshot-Home-Page.jpg" alt="Screenshot-Home-Page" style="width: 40%;"/>
 </div>
 
 ### Screenshot of Home Page's Room List
 <div align="center">
-  <img src="public/Screenshoot-Home-Page-Room-List.jpg" alt="Screenshot-Home-Page-Room-List" style="width: 40%;"/>
+  <img src="public/Screenshot-Home-Page-Room-List.jpg" alt="Screenshot-Home-Page-Room-List" style="width: 40%;"/>
 </div>
 
 ### Screenshot of Location Selector Page
 <div align="center">
-  <img src="public/Screenshoot-Location-Selector-Page.jpg" alt="Screenshot-Location-Selector-Page" style="width: 40%;"/>
+  <img src="public/Screenshot-Location-Selector-Page.jpg" alt="Screenshot-Location-Selector-Page" style="width: 40%;"/>
 </div>
 
 
