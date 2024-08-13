@@ -30,7 +30,7 @@ Future enhancements will focus on completing additional functionalities. 🚀
 
 
 
-## More Info:
+## More Info
 
 **Technical Stack:**
 
