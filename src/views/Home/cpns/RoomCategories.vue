@@ -72,7 +72,7 @@ function categoryClick(navigateUrl) {
       }
 
       .category-title {
-        font-size: 13px;
+        font-size: 16px;
         white-space: nowrap;
       }
 

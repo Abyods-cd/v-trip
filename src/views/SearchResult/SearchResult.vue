@@ -1,6 +1,7 @@
 <script setup>
 import { useBookingStore } from '@/stores/booking';
 import { useLocateStore } from '@/stores/locate'
+import Nav from '@/components/Nav.vue'
 const bookingStore = useBookingStore()
 const locateStore = useLocateStore()
 
@@ -9,7 +10,7 @@ const locateStore = useLocateStore()
 
 <template>
   <div class="search-result">
-    search-result
+    <Nav navTitle="Search Result"></Nav>
     {{ bookingStore.startDateFormatted }}
     {{ bookingStore.endDateFormatted }}
     {{ $route.query.destination }}

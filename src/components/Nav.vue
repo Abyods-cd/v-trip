@@ -23,4 +23,8 @@ const props = defineProps({
 </template>
 
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.nav{
+  font-size: 22px;
+}
+</style>

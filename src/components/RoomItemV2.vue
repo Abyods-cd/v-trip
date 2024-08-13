@@ -84,10 +84,9 @@ const discount = computed(() => {
       justify-content: center;
 
       .price {
-
         .final-price {
           color: var(--primary-color);
-          font-size: 17px;
+          font-size: 18px;
           font-weight: 600;
         }
 
@@ -102,6 +101,7 @@ const discount = computed(() => {
           align-items: center;
           color: rgb(242, 66, 66);
           font-weight: 600;
+          font-size: 18px;
 
           .discount-img {
             width: 30%;

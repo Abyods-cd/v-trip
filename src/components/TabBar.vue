@@ -50,9 +50,11 @@ watch(route, (newRoute) => {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 70px;
   border-top: 1px solid var(--primary-color);
   cursor: pointer;
   background-color: #fff;
+  font-size: 20px;
 
   .tabbar-item {
     flex: none;
@@ -60,7 +62,7 @@ watch(route, (newRoute) => {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 85px;
+    width: 100px;
 
     &.active {
       color: var(--primary-color);

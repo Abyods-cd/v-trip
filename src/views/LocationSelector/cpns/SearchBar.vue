@@ -90,11 +90,11 @@ function confirmClick() {
   right: 8px;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 10px;
+  padding: 5px;
   color: var(--primary-color);
   width: 70px;
   height: 32px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400 !important;
   border: 1px solid #DCDFE6;
   border-radius: 10%;

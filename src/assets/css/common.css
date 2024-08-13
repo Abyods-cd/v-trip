@@ -2,6 +2,12 @@
   --primary-color: #FF9854;
   --bg-color: #F8F8F8;
   --van-primary-color: #FF9854 !important;
+  --van-cell-font-size: 16px !important;
+  --dp-font-size: 16px !important;
+  --el-color-primary: #FF9854 !important;
+  --van-nav-bar-title-font-size: 22px !important;
+  --van-font-size-md: 22px !important;
+  --van-nav-bar-arrow-size: 22px !important;
 }
 
 body {

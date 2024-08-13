@@ -87,12 +87,13 @@ function btnClick(btnName) {
   position: fixed;
   top: 32px;
   width: 100%;
+  font-size: 16px !important;
 }
 
 .demo-tabs>.el-tabs__content {
   /* color: #6b778c; */
   color: #666;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   height: calc(100vh - 90px);
   overflow-y: auto;
@@ -134,7 +135,7 @@ function btnClick(btnName) {
   border-color: transparent;
   color: #666;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
 
   padding: 6px;
 

@@ -82,8 +82,8 @@ function searchClick() {
 
   .guest-info {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: start;
     width: 100%;
 
     .room,
@@ -91,17 +91,18 @@ function searchClick() {
     .children {
       display: flex;
       flex: 1;
+      justify-content: start;
       align-items: center;
 
       .el-input-number {
-        min-width: 60px;
-        flex: 1 1 60px;
+        // min-width: 60px;
+        flex: 1 1 20%;
       }
 
       .input-text {
         text-align: center;
-        max-width: 60px;
-        flex: 1 1 40px;
+        // max-width: 60px;
+        flex: 1;
       }
     }
   }
@@ -112,8 +113,8 @@ function searchClick() {
     width: 100%;
     margin-top: 10px;
     padding: 20px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     border-radius: 10px;
     border-color: #FEAF3D;
   }

@@ -46,7 +46,7 @@ function listItemClick(item) {
   margin-bottom: 50px;
 
   .title {
-    font-size: 18px;
+    font-size: 19px;
     font-weight: 500;
   }
 

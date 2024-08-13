@@ -11,4 +11,8 @@ import Nav from '@/components/Nav.vue'
 </template>
 
 
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.message {
+  margin: 5px;
+}
+</style>

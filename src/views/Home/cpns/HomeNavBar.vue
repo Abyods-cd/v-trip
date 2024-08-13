@@ -16,7 +16,7 @@
 <style lang="less" scoped>
 .title {
   color: var(--primary-color);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   text-align: center;
   width: 100%;
