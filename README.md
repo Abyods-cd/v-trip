@@ -14,13 +14,14 @@ Future enhancements will focus on completing additional functionalities. 🚀
 ## Project Screenshots
 
 ### Screenshot of Home Page
-![Screenshot-Home-Page](public/Screenshoot-Home-Page.jpg)
+<img src="public/Screenshoot-Home-Page.jpg" alt="Screenshot-Home-Page" style="width: 40%;"/>
 
 ### Screenshot of Home Page's Room List
-![Screenshot-Home-Page-Room-List](public/Screenshoot-Home-Page-Room-List.jpg)
+<img src="public/Screenshoot-Home-Page-Room-List.jpg" alt="Screenshot-Home-Page-Room-List" style="width: 40%;"/>
 
 ### Screenshot of Location Selector Page
-![Screenshot-Location-Selector-Page](public/Screenshoot-Location-Selector-Page.jpg)
+<img src="public/Screenshoot-Location-Selector-Page.jpg" alt="Screenshot-Location-Selector-Page" style="width: 40%;"/>
+
 
 ## More Info:
 
